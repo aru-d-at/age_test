@@ -7,8 +7,7 @@ on:
   pull_request:
     branches: [ "master", PG11 ]
 
-  on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
