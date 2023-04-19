@@ -1,8 +1,8 @@
-name: Go Driver Test
+name: Go Driver Tests
 
 on:
   push:
-    branches: [ "master", "PG11" ]
+    branches: [ "master", PG11 ]
 
   pull_request:
     branches: [ "master", PG11 ]
