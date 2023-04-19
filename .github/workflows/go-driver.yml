@@ -2,7 +2,7 @@ name: Go Driver Test
 
 on:
   push:
-    branches: [ "master", PG11 ]
+    branches: [ "master", "PG11" ]
 
   pull_request:
     branches: [ "master", PG11 ]
@@ -31,6 +31,7 @@ jobs:
     
     - name: Set up Java
       uses: actions/setup-java@v3
+      with:
         distribution: ${{ matrix.distributions }}
         java-version: '17'
     
