@@ -1,22 +1,24 @@
 [project]
 name = "apache-age"
-version = "0.0.3"
+version = "0.0.5"
 authors = [
   { name="Apache" },
 ]
-description = "A small example package"
+description = "Python driver support for Apache AGE"
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
 ]
+keywords = ['Graph Database', 'Apache AGE', 'PostgreSQL'],
+dynamic = [dependencies, keywords, license]
 
 [project.urls]
 "Homepage" = "https://github.com/apache/age/tree/master/drivers/python"
 "Bug Tracker" = "https://github.com/apache/age/issues"
 
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", 'psycopg2', 'antlr4-python3-runtime==4.11.1']
 build-backend = "setuptools.build_meta"

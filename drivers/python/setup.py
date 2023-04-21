@@ -32,8 +32,8 @@ setup(
     install_requires = [ 'psycopg2', 'antlr4-python3-runtime==4.11.1'],
     packages         = ['age', 'age.gen'],
     keywords         = ['Graph Database', 'Apache AGE', 'PostgreSQL'],
-    python_requires  = '>=3.9',
+    python_requires  = '>=3.10',
     classifiers      = [
-        'Programming Language :: Python :: 3.9'
+        'Programming Language :: Python :: 3.10'
     ]
 )
