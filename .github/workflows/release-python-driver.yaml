@@ -3,7 +3,7 @@ name: Release Python Driver
 on:
   workflow_run:
     workflows: [ Python Driver Tests ]
-    branches: [ 'master', 'PG11' ]
+    # branches: [ 'master', 'PG11' ]
     types: [ completed ]
 
   release:
