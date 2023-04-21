@@ -37,8 +37,6 @@ jobs:
       run: |
         python setup.py install
       
-      run: ls -all
-
     - name: Test
       run: |
         python -m unittest -v test_age_py.py
