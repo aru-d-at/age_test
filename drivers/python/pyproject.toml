@@ -6,13 +6,15 @@ authors = [
 ]
 description = "Python driver support for Apache AGE"
 readme = "README.md"
+license = {file = 'LICENSE'}
+keywords = ['Graph Database', 'Apache AGE', 'PostgreSQL']
 requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3.10",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
 ]
-keywords = ['Graph Database', 'Apache AGE', 'PostgreSQL']
+dependencies = ['psycopg2', 'antlr4-python3-runtime==4.11.1']
 dynamic = ['dependencies', 'keywords', 'license']
 
 [project.urls]
@@ -20,5 +22,5 @@ dynamic = ['dependencies', 'keywords', 'license']
 "Bug Tracker" = "https://github.com/apache/age/issues"
 
 [build-system]
-requires = ["setuptools>=61.0", 'psycopg2', 'antlr4-python3-runtime==4.11.1']
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
