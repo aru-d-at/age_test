@@ -13,7 +13,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 keywords = ['Graph Database', 'Apache AGE', 'PostgreSQL'],
-dynamic = [dependencies, keywords, license]
+dynamic = ['dependencies', 'keywords', 'license']
 
 [project.urls]
 "Homepage" = "https://github.com/apache/age/tree/master/drivers/python"
