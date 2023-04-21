@@ -36,6 +36,8 @@ jobs:
     - name: Build
       run: |
         python setup.py install
+      
+      run: ls -all
 
     - name: Test
       run: |
