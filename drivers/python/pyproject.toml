@@ -7,15 +7,15 @@ authors = [
 description = "Python driver support for Apache AGE"
 readme = "README.md"
 license = {file = 'LICENSE'}
-keywords = ['Graph Database', 'Apache AGE', 'PostgreSQL']
+keywords = ["Graph Database", "Apache AGE", "PostgreSQL"]
 requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3.10",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
 ]
-dependencies = ['psycopg2', 'antlr4-python3-runtime==4.11.1']
-dynamic = ['dependencies', 'keywords', 'license']
+dependencies = ["psycopg2", "antlr4-python3-runtime==4.11.1"]
+dynamic = ["dependencies", "keywords", "license"]
 
 [project.urls]
 "Homepage" = "https://github.com/apache/age/tree/master/drivers/python"
