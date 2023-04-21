@@ -12,7 +12,7 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
 ]
-keywords = ['Graph Database', 'Apache AGE', 'PostgreSQL'],
+keywords = ['Graph Database', 'Apache AGE', 'PostgreSQL']
 dynamic = ['dependencies', 'keywords', 'license']
 
 [project.urls]
