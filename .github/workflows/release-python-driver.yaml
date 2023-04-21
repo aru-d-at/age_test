@@ -11,9 +11,6 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -34,20 +31,21 @@ jobs:
       run: |
         sudo apt-get install python3-dev libpq-dev
         pip install -r requirements.txt
-        pip install wheel
+        pip install wheel twine
     
-    - name: Build
+    - name: Build & Publish to TestPyPi
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
       run: |
         python setup.py sdist bdist_wheel
-        ls -all
+        twine upload --repository testpypi dist/*
 
-    - name: Publish distribution 📦 to Test PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        repository-url: https://test.pypi.org/legacy/
-    - name: Publish distribution 📦 to PyPI
+    - name: Build & Publish Releases
       if: startsWith(github.ref, 'refs/tags')
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        password: ${{ secrets.PYPI_API_TOKEN }}
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        python setup.py sdist bdist_wheel
+        twine upload dist/*
