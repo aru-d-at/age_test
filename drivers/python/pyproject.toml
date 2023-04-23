@@ -7,7 +7,6 @@ authors = [
 description = "Python driver support for Apache AGE"
 readme = "README.md"
 license = {file = 'LICENSE'}
-keywords = ["Graph Database", "Apache AGE", "PostgreSQL"]
 requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3.10",
